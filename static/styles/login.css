@@ -1,0 +1,52 @@
+#login-container {
+display: flex;
+flex-direction: column;
+border-bottom: thin solid black;
+
+}
+
+#login-form {
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+#login-form input {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#login-form-msg {
+    display: none;
+}
+
+
+#register-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+#register-form input {
+    margin-bottom: 10px;
+}
+
+#register-form-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#register-form-button-container button {
+    width: 50%;
+}
+
+#register-form-msg {
+    display: none;
+}
+
+

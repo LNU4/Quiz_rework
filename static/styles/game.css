@@ -1,0 +1,17 @@
+#game-container {
+    display: none;
+    flex-direction: column;
+}
+
+#next-city-button {
+    display: none;
+}
+
+#game-results-container {
+    display: none;
+    flex-direction: column;
+}
+
+#game-session-token-header {
+    margin: 0;
+}

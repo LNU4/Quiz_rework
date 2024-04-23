@@ -1,0 +1,111 @@
+#main-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+#main-menu-container img {
+    width: 150px;
+    height: 300px;
+}
+
+#main-menu-container button {
+    width: 20%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+#main-menu-game-mode-selection-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-menu-game-mode-selection-container #create-new-game-button {
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+#main-menu-game-mode-selection-back-button-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#main-menu-game-mode-selection-back-button-container button {
+
+}
+
+
+#main-menu-game-mode-selection-input-container {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+#main-menu-game-mode-selection-input-container input {
+    margin-right: 10px;
+}
+
+#main-menu-game-mode-selection-input-container button {
+    margin: 0;
+}
+
+#main-menu-leaderboard-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#main-menu-leaderboard-container #main-menu-leaderboard-back-button {
+    margin-bottom: 10px;
+}
+
+#main-menu-leaderboard-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#main-menu-leaderboard-input-container input {
+    margin-right: 10px;
+}
+
+#main-menu-leaderboard-input-container button {
+    margin: 0;
+}
+
+#main-menu-leaderboard-table-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#main-menu-leaderboard-results-container {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+
+#main-menu-leaderboard-results-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#main-menu-leaderboard-results-container th,
+#main-menu-leaderboard-results-container td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#main-menu-leaderboard-results-container th {
+    background-color: #f4f4f4;
+}
+
