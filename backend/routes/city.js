@@ -1,6 +1,6 @@
 import express from "express";
 import mysql from "mysql2/promise";
-//import db from "../db-config.js"
+
 const router = express.Router();
 
 const db = mysql.createPool({

@@ -10,6 +10,11 @@ function showMainMenuContainer() {
 	let leaderboardContainer = document.getElementById(
 		"main-menu-leaderboard-container"
 	);
+	let leaderboardResultsContainer = document.getElementById(
+		"main-menu-leaderboard-results-container"
+	);
+	leaderboardResultsContainer.style.display = "none";
+
 	let gameContainer = document.getElementById("game-container");
 
 	loginContainer.style.display = "none";
@@ -64,13 +69,13 @@ function showLeaderboardContainer() {
 
 	document
 		.getElementById("show-leaderboard-button")
-		.addEventListener("click", fetchLeaderboardData);
+		.addEventListener("click", fetchLeaderboardDataInMainMenu);
 	document
 		.getElementById("main-menu-leaderboard-back-button")
 		.addEventListener("click", showMainMenuContainer);
 }
 
-async function fetchLeaderboardData() {
+async function fetchLeaderboardDataInMainMenu() {
 	let sessionToken = document.getElementById("leaderboard-session-input").value;
 	if (!sessionToken) {
 		alert("Please enter a valid session token.");

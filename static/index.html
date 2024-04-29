@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,10 @@
     <script type="module" src="./script/login.js"></script>
     <script type="module" src="./script/main-menu.js"></script>
     <script type="module" src="./script/game.js"></script>
-    
-    
+
+
 </head>
+
 <body>
     <div id="login-container">
         <h2>Login</h2>
@@ -36,13 +38,13 @@
             <label for="password">Password:</label>
             <input type="password" id="register-password" required>
             <div id="register-form-button-container">
-            <button type="submit">Register</button>
+                <button type="submit">Register</button>
             </div>
         </form>
-        </div>
-        
+    </div>
+
     <div id="main-menu-container">
-        <img src="../resources/images/main-menu-logo.png" />
+        <img src="../resources/images/tempo.png" />
         <h1>Quiz game</h1>
         <h2>Main menu</h2>
         <button id="main-menu-play-button">Play</button>
@@ -58,9 +60,10 @@
         <button id="main-menu-game-mode-selection-create-new-game-button">Create new game</button>
         <p>OR</p>
         <div id="main-menu-game-mode-selection-input-container">
-            <input placeholder="Enter game session token" id="main-menu-game-mode-selection-session-input" type="text" />
+            <input placeholder="Enter game session token" id="main-menu-game-mode-selection-session-input"
+                type="text" />
             <button id="main-menu-game-mode-selection-join-game-button">Join</button>
-        </div>        
+        </div>
     </div>
 
     <div id="main-menu-leaderboard-container">
@@ -70,9 +73,9 @@
             <input placeholder="Enter game session token" id="leaderboard-session-input" type="text" />
             <button id="show-leaderboard-button">Show Leaderboard for Game</button>
         </div>
-        <div id="main-menu-leaderboard-results-container"></div>
+
     </div>
-    
+
     <div id="game-container">
         <h2>City Temperature Guessing Game</h2>
         <label>Game session token </label>
@@ -88,8 +91,12 @@
         </div>
         <div id="user-guess-info"></div>
     </div>
-    
 
-    
+    <div id="main-menu-leaderboard-results-container"></div>
+
+
+
+
 </body>
+
 </html>

@@ -169,9 +169,13 @@ function updateGameResults(message) {
 }
 
 async function finishGame() {
+	let nextCityButton = document.getElementById("next-city-button");
+	nextCityButton.style.display = "none";
+
 	let gameSessionId = sessionStorage.getItem("game_session_id");
 	let answeringUserId = sessionStorage.getItem("logged_in_user_id");
 	let score = sessionStorage.getItem("score");
+	document.getElementById("user-guess-info").textContent = "";
 
 	try {
 		let response = await fetch("http://localhost:3000/api/game/finish-game", {
@@ -188,11 +192,81 @@ async function finishGame() {
 			document
 				.getElementById("game-results-container")
 				.appendChild(mainMenuButton);
+
+			showSessionLeaderboard();
 		} else {
 			console.error("Failed to update leaderboard");
 		}
 	} catch (error) {
 		console.error("Error updating leaderboard:", error);
+	}
+}
+
+async function showSessionLeaderboard() {
+	let resultsContainer = document.getElementById(
+		"main-menu-leaderboard-results-container"
+	);
+
+	let sessionToken = sessionStorage.getItem("game_session_token");
+	if (!sessionToken) {
+		alert("Please enter a valid session token.");
+		return;
+	}
+
+	try {
+		const response = await fetch(
+			`http://localhost:3000/api/menu/leaderboard?sessionToken=${sessionToken}`
+		);
+		const data = await response.json();
+		if (data.success) {
+			let scores = data.scores;
+			let resultsContainer = document.getElementById(
+				"main-menu-leaderboard-results-container"
+			);
+			resultsContainer.style.display = "block";
+			resultsContainer.innerHTML = "";
+
+			if (scores.length === 0) {
+				resultsContainer.textContent = "No scores available for this session.";
+				return;
+			}
+
+			let table = document.createElement("table");
+			let thead = document.createElement("thead");
+			let tbody = document.createElement("tbody");
+
+			let headerRow = document.createElement("tr");
+			let nameHeader = document.createElement("th");
+			nameHeader.textContent = "Username";
+			let scoreHeader = document.createElement("th");
+			scoreHeader.textContent = "Score";
+			headerRow.appendChild(nameHeader);
+			headerRow.appendChild(scoreHeader);
+			thead.appendChild(headerRow);
+
+			table.appendChild(thead);
+
+			scores.forEach((score) => {
+				let row = document.createElement("tr");
+				let nameCell = document.createElement("td");
+				nameCell.textContent = score.username;
+				let scoreCell = document.createElement("td");
+				scoreCell.textContent = score.score;
+				row.appendChild(nameCell);
+				row.appendChild(scoreCell);
+				tbody.appendChild(row);
+			});
+
+			table.appendChild(tbody);
+
+			resultsContainer.appendChild(table);
+			resultsContainer.style.display = "block";
+		} else {
+			alert("Failed to fetch leaderboard: " + data.error);
+		}
+	} catch (error) {
+		console.error("Error fetching leaderboard:", error);
+		alert("An error occurred while trying to fetch the leaderboard.");
 	}
 }
 
