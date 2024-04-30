@@ -7,7 +7,7 @@ const router = express.Router();
 const db = mysql.createPool({
 	host: "localhost",
 	user: "root",
-	password: "",
+	password: "root",
 	database: "quiz_rework",
 });
 
