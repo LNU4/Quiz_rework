@@ -1,7 +1,7 @@
 
 ## Installation Guide:
 - Run npm i to install the required files.
-- Import the SQL file using PHPMyAdmin. If you're using another application, simply insert the queries.
+- Import the SQL by simply insert the queries.
 - Enjoy playing the best game of your life.
 # Adjustments:
 - Most of the frontend styling needs improvement.
