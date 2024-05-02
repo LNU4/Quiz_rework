@@ -1,22 +1,25 @@
-## Installation guide: 
 
-- npm i to install the file. 
+## Installation Guide:
+- Run npm i to install the required files.
+- Import the SQL file using PHPMyAdmin. If you're using another application, simply insert the queries.
+- Enjoy playing the best game of your life.
+# Adjustments:
+- Most of the frontend styling needs improvement.
+- Adding a map could make the game more enjoyable.
+- Adding a db config to avoid writing configs several files.  
+## Note:
+- The only image used has a Commercial Usage License.
 
-- Import the sql "PHPmyadmin import, note that using any other application, you can just insert the queries. 
+- Nasser Alobaedi
+- Contact: na223cz@student.lnu.se
+- Feel free to share the code once I pass (hopefully). If I fail again, I will apply copyrights to it.
 
-- Enjoy the best game of your life. 
-
-
-## Adjuemnts? 
-- Almost the whole styling of the front-end requires imporvment. 
-- Adding map would perhaps make the game more fun to play. 
-
-## Note: The only image used have Commercial Usage License. 
-## Nasser Alobaedi. Na223cz@student.lnu.se Feel free to share the code once I pass "hopefully", if I fail again, I will put copyrights on it. 
-
-## How to play: 
-
-- Make a login user account if you don't have any.
-- Play and create a session if you don't have any. 
-- Submit 5 guesses. If your guess isn't correct, you get no point, close guess gives 2 points and correct guess gives 5. 
-- After a 5 guesses, you get your result in leaderboard. You can copy the session and send it to your friend if you want your friend to test. 
+## How to Play:
+- Create a user login account if you don't have one.
+- Start a new game session by pressing Play if you haven't already.
+- Create a new game or use session token if you got any from your friend.
+- Submit 5 guesses. Correct guesses earn 5 points, close guesses earn 2 points, and incorrect guesses earn 0 points.
+- After 5 guesses, view your results on the leaderboard. 
+- You can share your session with a friend by copying the session token "located under the Go to main menu button" and then they can use it before creating a new game.
+## Locations:
+- The setup_db.sql file is located in the resources folder.
