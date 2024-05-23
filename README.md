@@ -12,7 +12,7 @@
 
 - Nasser Alobaedi
 - Contact: na223cz@student.lnu.se
-- Feel free to share the code once I pass (hopefully). If I fail again, I will apply copyrights to it.
+- Feel free to share the code.
 
 ## How to Play:
 - Create a user login account if you don't have one.
